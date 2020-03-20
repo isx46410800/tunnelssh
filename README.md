@@ -42,10 +42,10 @@ phpldapadmin.
 + *nota* atenció al binding que fa ssh dels ports dels túnels SSH (per defecte són només al localhost).
 
 <a name="id1"></a>
-## Exemple-15 Ldap-remot i phpldapadmin-local
+## 1. Exemple-15 Ldap-remot i phpldapadmin-local
 
 <a name="id11"></a>
-### Desplegar el servei ldap
+### 1.1. Desplegar el servei ldap
 
 + Conecto vía ssh a la AMI AWS:  
 `[isx46410800@localhost .ssh]$ ssh -i mykeypair.pem fedora@3.10.223.220`
@@ -98,7 +98,7 @@ dn: cn=1asix,ou=grups,dc=edt,dc=org
 ![foto2](./capturas/foto2.png)
 
 <a name="id12"></a>
-#### Desplegar el servei phpldapadmin
+#### 1.2. Desplegar el servei phpldapadmin
 
 + Encendemos en el host local de casa un phpldapadmin:  
 `[isx46410800@localhost tunnelssh]$ docker run --rm --name phpldapadmin -h phpldapadmin --net mynet -p 8080:8080 -d isx46410800/phpldapadmin`
@@ -142,10 +142,10 @@ $servers->setValue('server','port',50000);
 ![foto5](./capturas/foto5.png)
 
 <a name="id2"></a>
-## Exemple-16. Ldap-local i phpldapadmin-remot
+## 2. Exemple-16. Ldap-local i phpldapadmin-remot
 
 <a name="id21"></a>
-### Engegar ldap i phpldapadmin i que tinguin connectivitat:
+### 2.1. Engegar ldap i phpldapadmin i que tinguin connectivitat:
 
 + Encendemos en nuestro host de casa un container ldap:  
 `[isx46410800@localhost tunnelssh]$ docker run --rm --name ldap -h ldap --net mynet -p 389:389 -d isx46410800/ldapserver19:group`
@@ -204,7 +204,7 @@ tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN
 ```
 
 <a name="id22"></a>
-### Ara cal accedir des del host de l’aula al port 8080 del phpldapadmin per visualitzar-lo. Per fer-ho cal:
+### 2.2. Ara cal accedir des del host de l’aula al port 8080 del phpldapadmin per visualitzar-lo. Per fer-ho cal:
 
 + Añadimos la resolución al /etc/hosts:  
 `172.18.0.2 phpldapadmin`
