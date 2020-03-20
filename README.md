@@ -1,4 +1,7 @@
 # README
+**Índice**
+1. [Primer apartado](#id1)
+2. [Segundo apartado](#id2)
 
 ## <u>Exemple-15 Ldap-remot i phpldapadmin-local</u>
 + **Explicació:**
@@ -34,6 +37,7 @@ phpldapadmin.
 + Ara amb un navegador ja podem visualitzar localment des del host de l’aula el phpldapadmin connectant al pot directe acabat de crear.
 + *nota* atenció al binding que fa ssh dels ports dels túnels SSH (per defecte són només al localhost).
 
+<a name="id1"></a>
 ## Exemple-15 Ldap-remot i phpldapadmin-local
 
 ### Desplegar el servei ldap
@@ -131,6 +135,7 @@ $servers->setValue('server','port',50000);
 + Vemos aquí con una captura:  
 ![foto5](./capturas/foto5.png)
 
+<a name="id2"></a>
 ## Exemple-16. Ldap-local i phpldapadmin-remot
 
 ### Engegar ldap i phpldapadmin i que tinguin connectivitat:
