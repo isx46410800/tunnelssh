@@ -1,7 +1,11 @@
 # README
-**Índice**
-1. [Primer apartado](#id1)
-2. [Segundo apartado](#id2)
+## **Índice Crazy Thing!**
+1. [Exemple-15 Ldap-remot i phpldapadmin-local](#id1)  
+  1.1 [Desplegar el servei LDAP](#id11)  
+  1.2 [Desplegar el servei phpldapadmin](#id12)  
+2. [Exemple-16. Ldap-local i phpldapadmin-remot](#id2)  
+  2.1 [Engegar ldap i phpldapadmin i que tinguin connectivitat](#id21)    
+  2.2 [Ara cal accedir des del host de l’aula al port 8080 del phpldapadmin per visualitzar-lo](#id22)  
 
 ## <u>Exemple-15 Ldap-remot i phpldapadmin-local</u>
 + **Explicació:**
@@ -40,6 +44,7 @@ phpldapadmin.
 <a name="id1"></a>
 ## Exemple-15 Ldap-remot i phpldapadmin-local
 
+<a name="id11"></a>
 ### Desplegar el servei ldap
 
 + Conecto vía ssh a la AMI AWS:  
@@ -92,6 +97,7 @@ dn: cn=1asix,ou=grups,dc=edt,dc=org
 + Aquí lo vemos con una captura:  
 ![foto2](./capturas/foto2.png)
 
+<a name="id12"></a>
 #### Desplegar el servei phpldapadmin
 
 + Encendemos en el host local de casa un phpldapadmin:  
@@ -138,6 +144,7 @@ $servers->setValue('server','port',50000);
 <a name="id2"></a>
 ## Exemple-16. Ldap-local i phpldapadmin-remot
 
+<a name="id21"></a>
 ### Engegar ldap i phpldapadmin i que tinguin connectivitat:
 
 + Encendemos en nuestro host de casa un container ldap:  
@@ -196,6 +203,7 @@ tcp        0      0 0.0.0.0:50000           0.0.0.0:*               LISTEN
 tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN
 ```
 
+<a name="id22"></a>
 ### Ara cal accedir des del host de l’aula al port 8080 del phpldapadmin per visualitzar-lo. Per fer-ho cal:
 
 + Añadimos la resolución al /etc/hosts:  
